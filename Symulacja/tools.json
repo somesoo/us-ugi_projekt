@@ -1,0 +1,53 @@
+{
+    "Boards": [
+        {
+            "ID": "49342",
+            "Name": "wiertarka",
+            "Where": "place"
+        },
+        {
+            "ID": "80950",
+            "Name": "mlotek",
+            "Where": "place"
+        },
+        {
+            "ID": "76519",
+            "Name": "dluto",
+            "Where": "place"
+        },
+        {
+            "ID": "25600",
+            "Name": "poziomica",
+            "Where": "place"
+        },
+        {
+            "ID": "35834",
+            "Name": "miarka",
+            "Where": "place"
+        },
+        {
+            "ID": "32224",
+            "Name": "wiadro",
+            "Where": "place"
+        },
+        {
+            "ID": "10265",
+            "Name": "taczka",
+            "Where": "place"
+        }
+    ],
+    "Worker": [
+        {
+            "Name": "Adam",
+            "inv": []
+        },
+        {
+            "Name": "Kuba",
+            "inv": []
+        },
+        {
+            "Name": "Michal",
+            "inv": []
+        }
+    ]
+}
