@@ -9,7 +9,7 @@ with open (r"tools.json") as tag:
 	data_tag = json.load(tag)
 
 #for i in range(len(data_tag["Boards"])):
-#	print(data_tag["Boards"][i]["Where"])
+#	print(data_tag["Boards"][i]["Placement"])
 
 
 def takeID(item):
@@ -25,14 +25,14 @@ def takeName(item):
 def take_tool(toolID, worker):
 	i = int(takeID(toolID))
 	j = int(takeName(worker))
-	data_tag["Boards"][i]["Where"] = data_tag["Worker"][j]["Name"]
+	data_tag["Boards"][i]["Placement"] = data_tag["Worker"][j]["Name"]
 	data_tag["Worker"][j]["inv"].append(str({data_tag["Boards"][i]["ID"]})[2:-2])
 	#print(data_tag["Boards"][i])
 
 def return_tool(toolID, worker, pos):
 	i = int(takeID(toolID))
 	j = int(takeName(worker))
-	data_tag["Boards"][i]["Where"] = 'place'
+	data_tag["Boards"][i]["Placement"] = 'place'
 	data_tag["Worker"][j]["inv"].remove(data_tag["Worker"][j]["inv"][pos])
 	#print(data_tag["Boards"][i])
 
@@ -44,7 +44,7 @@ def check_inv(name):
 
 def check_szafa():
 	for i in range(len(data_tag["Boards"])):
-			if data_tag["Boards"][i]["Where"] == "place":
+			if data_tag["Boards"][i]["Placement"] == "place":
 				print(i, data_tag["Boards"][i]["ID"], data_tag["Boards"][i]["Name"])
 
 def check_workers():
@@ -63,7 +63,7 @@ def reczna_sym():
 		if wyb == 1:
 			tool = 0
 			for i in range(len(data_tag["Boards"])):
-				if data_tag["Boards"][i]["Where"] == 'place':
+				if data_tag["Boards"][i]["Placement"] == 'place':
 					print(i, data_tag["Boards"][i]["ID"], data_tag["Boards"][i]["Name"])
 			tl = int(input("Które narzędzie: "))
 			while tl > len(data_tag["Boards"])-1:

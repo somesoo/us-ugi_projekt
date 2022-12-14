@@ -2,38 +2,38 @@
     "Boards": [
         {
             "ID": "49342",
-            "Name": "wiertarka",
-            "Where": "place"
+            "Name": "kartofle",
+            "Placement": "place"
         },
         {
             "ID": "80950",
             "Name": "mlotek",
-            "Where": "place"
+            "Placement": "place"
         },
         {
             "ID": "76519",
             "Name": "dluto",
-            "Where": "place"
+            "Placement": "place"
         },
         {
             "ID": "25600",
             "Name": "poziomica",
-            "Where": "place"
+            "Placement": "place"
         },
         {
             "ID": "35834",
             "Name": "miarka",
-            "Where": "place"
+            "Placement": "place"
         },
         {
             "ID": "32224",
             "Name": "wiadro",
-            "Where": "place"
+            "Placement": "place"
         },
         {
             "ID": "10265",
             "Name": "taczka",
-            "Where": "place"
+            "Placement": "place"
         }
     ],
     "Worker": [
