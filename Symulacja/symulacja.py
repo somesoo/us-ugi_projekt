@@ -11,6 +11,11 @@ with open (r"tools.json") as tag:
 #for i in range(len(data_tag["Boards"])):
 #	print(data_tag["Boards"][i]["Placement"])
 
+def write_to_file(data):
+	json_str = json.dumps(data, indent=4)
+	with open (r"tools.json", 'w') as tag:
+		tag.write(json_str)
+
 
 def takeID(item):
 	for i in range(len(data_tag["Boards"])):
@@ -149,6 +154,7 @@ while choice != '6':
 		reczna_sym()
 		ans = input().split(' ')[0]
 		os.system('cls')
+		write_to_file(data_tag)
 	elif choice == '3':
 		check_szafa()
 		ans = input().split(' ')[0]
@@ -162,11 +168,10 @@ while choice != '6':
 		check_workers()
 		print("Zawartość szaf: \n")
 		check_szafa()	
-		ans = input().split(' ')[0]
 		os.system('cls')
+		write_to_file(data_tag)
 	elif choice == '6':
 		print("Koniec")
 		os.system('cls')
 		exit()
 	choice = input("Podaj co chcesz zrobic:\n1. Automatyczna symulacja\n2. Reczna symulacja\n3. Sprawdz zawartosc szaf\n4. Sprawdz pracownikow\n5. Generuj raport\n6. Wyjscie\nPodaj liczbe: ")
-	

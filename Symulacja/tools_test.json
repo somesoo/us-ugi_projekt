@@ -8,7 +8,7 @@
         {
             "ID": "80950",
             "Name": "mlotek",
-            "Placement": "Michal"
+            "Placement": "Kuba"
         },
         {
             "ID": "76519",
@@ -43,13 +43,13 @@
         },
         {
             "Name": "Kuba",
-            "inv": []
-        },
-        {
-            "Name": "Michal",
             "inv": [
                 "80950"
             ]
+        },
+        {
+            "Name": "Michal",
+            "inv": []
         }
     ]
 }
