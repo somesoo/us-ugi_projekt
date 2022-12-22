@@ -2,7 +2,7 @@ import json
 import os
 import time
  
-with open (r"tools.json") as tag:
+with open (r"tools.json", 'r') as tag:
 	data_tag = json.load(tag)
 
 #for i in range(len(data_tag["Boards"])):
