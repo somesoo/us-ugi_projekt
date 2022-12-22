@@ -1,5 +1,5 @@
 import json
-import os
+import subprocess
 import time
  
 with open (r"tools.json", 'r') as tag:
@@ -115,10 +115,10 @@ def reczna_sym():
 # 	check_inv(data_tag["Worker"][who]["Name"])
 
 
-choice = input("Podaj co chcesz zrobic:\n1. Opis symulacji\n2. Reczna symulacja\n3. Sprawdz zawartosc szaf\n4. Sprawdz pracownikow\n5. Generuj raport\n6. Wyjscie\nPodaj liczbe: ")
-while choice != '6':
+choice = int(input("Podaj co chcesz zrobic:\n1. Opis symulacji\n2. Reczna symulacja\n3. Sprawdz zawartosc szaf\n4. Sprawdz pracownikow\n5. Generuj raport\n6. Wyjscie\nPodaj liczbe: "))
+while True:
 	# Clearing the Screen
-	if choice == '1':
+	if choice == 1:
 		print("""		Symulacja zapisu i modyfikacji danych w systemie RFID
 				Możliwości to:
 				- generowanie raportu
@@ -143,20 +143,21 @@ while choice != '6':
 		# automa_sym(tool, who)
 		# ans = input().split(' ')[0]
 		# os.system('cls')
-	elif choice == '2':
+	elif choice == 2:
 		reczna_sym()
 		write_to_file(data_tag)
-	elif choice == '3':
+	elif choice == 3:
 		check_szafa()
-	elif choice == '4':
+	elif choice == 4:
 		check_workers()
-	elif choice == '5':
+	elif choice == 5:
 		print("Raport:\n")
 		check_workers()
 		print("Zawartość szaf: \n")
 		check_szafa()	
 		write_to_file(data_tag)
-	elif choice == '6':
+	elif choice == 6:
+		subprocess.run(["python3", "baza.py"])
 		print("Koniec")
 		exit()
-	choice = input("Podaj co chcesz zrobic:\n1. Automatyczna symulacja\n2. Reczna symulacja\n3. Sprawdz zawartosc szaf\n4. Sprawdz pracownikow\n5. Generuj raport\n6. Wyjscie\nPodaj liczbe: ")
+	choice = int(input("Podaj co chcesz zrobic:\n1. Automatyczna symulacja\n2. Reczna symulacja\n3. Sprawdz zawartosc szaf\n4. Sprawdz pracownikow\n5. Generuj raport\n6. Wyjscie\nPodaj liczbe: "))

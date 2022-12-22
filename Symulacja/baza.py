@@ -18,7 +18,7 @@ for item in range(len(json_obj["Worker"])):
     name = json_obj["Worker"][item]["Name"]
     for i in range(len(json_obj["Worker"][item]["inv"])):
         inventory = json_obj["Worker"][item]["inv"][i]
-#        print(name, inventory)
+        #print(name, inventory)
         cursor.execute("insert into Workers (Name,Inventory) value (%s, %s)",(name,inventory))
         
 connection.commit()
