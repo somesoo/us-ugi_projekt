@@ -1,10 +1,10 @@
 import pymysql
 import json
 
-connection = pymysql.connect(host='192.168.182.64', user='jonatan',passwd='1234',database='uslugi')
+connection = pymysql.connect(host='192.168.113.64', user='jonatan',passwd='1234',database='uslugi')
 cursor=connection.cursor()
-cursor.execute("DELETE FROM 'Workers' WHERE 1")
-cursor.execute("DELETE FROM 'Boards' WHERE 1")
+cursor.execute("DELETE FROM `Workers` WHERE 1")
+cursor.execute("DELETE FROM `Boards` WHERE 1")
 with open (r"tools.json") as tag:
     json_obj = json.load(tag)
 

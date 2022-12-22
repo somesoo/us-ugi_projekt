@@ -23,7 +23,7 @@
         {
             "ID": "35834",
             "Name": "miarka",
-            "Placement": "Adam"
+            "Placement": "place"
         },
         {
             "ID": "32224",
@@ -39,9 +39,7 @@
     "Worker": [
         {
             "Name": "Adam",
-            "inv": [
-                "35834"
-            ]
+            "inv": []
         },
         {
             "Name": "Kuba",
