@@ -13,11 +13,11 @@ for item in range(len(json_obj["Boards"])):
     where = json_obj["Boards"][item]["Placement"]
     cursor.execute("insert into Boards(ID,Name,Placement) value(%s, %s, %s)",(id,name,where))
 
-cursor=connection.cursor()
 for item in range(len(json_obj["Worker"])):
     name = json_obj["Worker"][item]["Name"]
     for i in range(len(json_obj["Worker"][item]["inv"])):
-        inventory = json_obj["Worker"][i]["inv"]
+        inventory = json_obj["Worker"][item]["inv"][i]
+        print(name, inventory)
         cursor.execute("insert into Workers (Name,Inventory) value (%s, %s)",(name,inventory))
         
 connection.commit()
