@@ -2,9 +2,6 @@ import json
 import os
 import time
  
-# Clearing the Screen
-os.system('cls')
-
 with open (r"tools.json") as tag:
 	data_tag = json.load(tag)
 
@@ -121,9 +118,7 @@ def reczna_sym():
 choice = input("Podaj co chcesz zrobic:\n1. Opis symulacji\n2. Reczna symulacja\n3. Sprawdz zawartosc szaf\n4. Sprawdz pracownikow\n5. Generuj raport\n6. Wyjscie\nPodaj liczbe: ")
 while choice != '6':
 	# Clearing the Screen
-	os.system('cls')
 	if choice == '1':
-		os.system('cls')
 		print("""		Symulacja zapisu i modyfikacji danych w systemie RFID
 				Możliwości to:
 				- generowanie raportu
@@ -132,8 +127,6 @@ while choice != '6':
 				- pobieranie narzedzi
 				- odkladanie narzedzi
 		Symulacja wykonana na potrzeby projektu z Usługi i Aplikacje Multimedialne		 """)
-		ans = input().split(' ')[0]
-		os.system('cls')
 		# for i in range(len(data_tag["Worker"])):
 		# 	print(i, data_tag["Worker"][i]["Name"])
 		# who = int(input("wybierz tożsamość: "))
@@ -152,26 +145,18 @@ while choice != '6':
 		# os.system('cls')
 	elif choice == '2':
 		reczna_sym()
-		ans = input().split(' ')[0]
-		os.system('cls')
 		write_to_file(data_tag)
 	elif choice == '3':
 		check_szafa()
-		ans = input().split(' ')[0]
-		os.system('cls')
 	elif choice == '4':
 		check_workers()
-		ans = input().split(' ')[0]
-		os.system('cls')
 	elif choice == '5':
 		print("Raport:\n")
 		check_workers()
 		print("Zawartość szaf: \n")
 		check_szafa()	
-		os.system('cls')
 		write_to_file(data_tag)
 	elif choice == '6':
 		print("Koniec")
-		os.system('cls')
 		exit()
 	choice = input("Podaj co chcesz zrobic:\n1. Automatyczna symulacja\n2. Reczna symulacja\n3. Sprawdz zawartosc szaf\n4. Sprawdz pracownikow\n5. Generuj raport\n6. Wyjscie\nPodaj liczbe: ")
