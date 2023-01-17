@@ -95,26 +95,6 @@ def reczna_sym():
 			print("Poza zakresem, powrót do menu")
 		wyb = int(input("Co chcesz zrobić:\n1. zabrac narzedzie\n2. odlozyc narzedzie\n3. Sprawdz zawartosc szaf\n4. sprawdz ekwipunek\n5. Wyjdz\nPodaj wybor: "))
 
-# def automa_sym(tool, who):
-# 	print("Pracownik bierze narzedzie: ")
-# 	take_tool(tool, data_tag["Worker"][who]["Name"])
-# 	time.sleep(1)
-# 	print("\nSprawdzam stan narzedzia: ")
-# 	check_tool(tool)
-# 	time.sleep(1)
-# 	#print(tool, who)
-# 	check_inv(data_tag["Worker"][who]["Name"])
-# 	time.sleep(1)
-# 	print("\n\nPracownik oddaje narzedzie: ")
-# 	return_tool(tool, data_tag["Worker"][who]["Name"], data_tag["Worker"][who]["inv"][tool])
-# 	time.sleep(1)
-# 	print("\nSprawdzam stan narzedzia: ")
-# 	check_tool(tool)
-# 	time.sleep(1)
-# 	print("Sprawdzam eq pracownika: ")
-# 	check_inv(data_tag["Worker"][who]["Name"])
-
-
 choice = int(input("Podaj co chcesz zrobic:\n1. Opis symulacji\n2. Reczna symulacja\n3. Sprawdz zawartosc szaf\n4. Sprawdz pracownikow\n5. Generuj raport\n6. Wyjscie\nPodaj liczbe: "))
 while True:
 	# Clearing the Screen
@@ -127,22 +107,6 @@ while True:
 				- pobieranie narzedzi
 				- odkladanie narzedzi
 		Symulacja wykonana na potrzeby projektu z Usługi i Aplikacje Multimedialne		 """)
-		# for i in range(len(data_tag["Worker"])):
-		# 	print(i, data_tag["Worker"][i]["Name"])
-		# who = int(input("wybierz tożsamość: "))
-		# while who > len(data_tag["Worker"])-1:
-		# 	print("nie ma takiego uzytkownika, wybierz ponownie: ")
-		# 	who = int(input("wybierz tożsamość: "))
-		# for i in range(len(data_tag["Boards"])):
-		# 	print(i, data_tag["Boards"][i]["ID"], data_tag["Boards"][i]["Name"])
-		# tl = int(input("Które narzędzie: "))
-		# while tl > len(data_tag["Boards"])-1:
-		# 	print("nie ma takiego narzędzia, wybierz ponownie: ")
-		# 	tl = int(input("Które narzędzie: "))
-		# tool = data_tag["Boards"][tl]["ID"]
-		# automa_sym(tool, who)
-		# ans = input().split(' ')[0]
-		# os.system('cls')
 	elif choice == 2:
 		reczna_sym()
 		write_to_file(data_tag)
