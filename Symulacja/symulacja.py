@@ -5,9 +5,6 @@ import time
 with open (r"tools.json", 'r') as tag:
 	data_tag = json.load(tag)
 
-#for i in range(len(data_tag["Boards"])):
-#	print(data_tag["Boards"][i]["Placement"])
-
 def write_to_file(data):
 	json_str = json.dumps(data, indent=4)
 	with open (r"tools.json", 'w') as tag:
